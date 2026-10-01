@@ -1,0 +1,131 @@
+/* 폰트 불러오기 */
+
+@font-face {
+    font-family: 'sjGothic';
+    src: url('sjGothic.otf');
+}
+
+
+
+/* 웹 전체 설정 */
+
+body {
+    margin: 0; /* 기본 여백 제거 */
+    background: rgb(255, 255, 255); /* 배경색 */
+    font-family: 'sjGothic'; /* 기본 폰트 */
+    overflow: auto; /* 웹페이지 스크롤 허용 */
+}
+
+
+
+/* 허밍극장의 거대한 공간 */
+
+#space {
+    position: relative;
+    width: 18200px; /* 공간 가로 크기 */
+    height: 9100px; /* 공간 세로 크기 */
+}
+
+
+
+/* 왼쪽 인덱스 메뉴 */
+
+#menu {
+    position: fixed; /* 스크롤해도 고정 */
+    top: 30px;
+    left: 30px;
+    z-index: 99999; /* 항상 맨 위 */
+    background: rgba(255, 255, 255, 0);
+}
+
+
+
+/* 메뉴 안의 링크들 */
+
+#menu span {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer; /* 마우스 올리면 클릭 가능 표시 */
+    color: #393939;
+}
+
+
+
+/* 방 제목 */
+
+.window h3 {
+
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+
+
+/* 방 안의 글 */
+
+.window-body {
+
+    line-height: 1.6; /* 줄간격 */
+}
+
+
+
+/* 방 안의 사진 */
+
+.room-image {
+
+    width: 75%; /* 방 너비의 75% */
+    height: auto; /* 비율 유지 */
+    display: block;
+}
+
+
+
+/* 선택한 카테고리 색상 변경 */
+
+#menu span.active {
+
+    color: #A3D1FF;
+
+} 
+
+
+
+/* 기록이 열리는 방(창) */
+
+.window {
+
+    position: absolute; /* 자유롭게 이동 가능 */
+    background: #ffffff; /* 방 색 */
+    padding: 20px; /* 내부 여백 */
+    border: 1.5px solid #ffffff;
+    color: #787878;
+    cursor: move; /* 드래그 가능 표시 */
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+
+
+/* 노트(창) 이동 */
+
+.note-window {
+
+    position: absolute;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    padding: 0;
+
+    cursor: move;
+}
+
+.note-window img {
+
+    pointer-events: none;
+}
